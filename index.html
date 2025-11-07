@@ -1,0 +1,162 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Роли (Базовые) — продажа и внедрение AI-решений</title>
+  <style>
+    :root { --bg:#ffffff; --card:#ffffff; --text:#0f172a; --muted:#5b6b80; --border:#e5e7eb; --chip:#f3f4f6; --accent:#0ea5e9; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    .wrap{max-width:1220px;margin:0 auto;padding:28px 18px 40px}
+    h1{font-size:clamp(22px,3vw,30px);margin:0 0 6px}
+    .lead{margin:0 0 18px;color:var(--muted)}
+    .table{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,rgba(15,23,42,.02),rgba(15,23,42,0))}
+    .thead,.trow{display:grid;grid-template-columns:220px repeat(5, 1fr);gap:0;border-bottom:1px solid var(--border);background:var(--card)}
+    .thead{background:#f8fafc;font-weight:700}
+    .cell{padding:12px 14px;border-right:1px solid var(--border)}
+    .trow .cell{padding:12px 14px;vertical-align:top}
+    .thead .cell:last-child,.trow .cell:last-child{border-right:0}
+    .group{grid-column:1 / -1;background:#f1f5f9;color:var(--text);font-weight:700}
+    ul{margin:6px 0 0 18px;padding:0}
+    li{margin:4px 0}
+    .muted{color:var(--muted);font-size:12px}
+    .legend{margin:12px 0 16px;color:var(--muted);font-size:12px}
+    @media (max-width: 980px){
+      .thead,.trow{grid-template-columns:1fr}
+      .thead .cell{display:none}
+      .cell{border-right:0;border-bottom:1px solid var(--border)}
+      .trow .cell:last-child{border-bottom:0}
+    }
+    .role{font-weight:700}
+  
+    .badge{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid var(--border)}
+    .b-discovery{background:#e6f4ff}
+    .b-presale{background:#f4f3ff}
+    .b-pilot{background:#e9fbf0}
+    .b-golive{background:#fff7e6}
+    .b-run{background:#f3f4f6}
+    
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Базовые роли: кто подключается и что делает</h1>
+      <p class="lead">Короткий взгляд на роли для типичных проектов (пилот/MVP). Колонки — этапы, ячейки — краткие действия.</p>
+      <div class="legend">Этапы: Discovery → Pre-sale → Pilot (PoC) → Go-Live → Run (SLA/поддержка)</div>
+    <div class="legend" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:4px">
+          <span class="badge b-discovery">Discovery</span>
+          <span class="badge b-presale">Pre-sale</span>
+          <span class="badge b-pilot">Pilot</span>
+          <span class="badge b-golive">Go-Live</span>
+          <span class="badge b-run">Run</span>
+        </div>
+      </header>
+
+    <section class="table" role="table" aria-label="Базовые роли">
+      <div class="thead" role="row">
+        <div class="cell" role="columnheader">Роль</div>
+        <div class="cell" role="columnheader">Discovery <span class="badge b-discovery">исследование</span></div>
+        <div class="cell" role="columnheader">Pre-sale <span class="badge b-presale">предпродажа</span></div>
+        <div class="cell" role="columnheader">Pilot <span class="badge b-pilot">пилот</span></div>
+        <div class="cell" role="columnheader">Go-Live <span class="badge b-golive">запуск</span></div>
+        <div class="cell" role="columnheader">Run <span class="badge b-run">поддержка</span></div>
+      </div>
+
+      <!-- CLIENT GROUP -->
+      <div class="trow">
+        <div class="cell group">КЛИЕНТ</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">Бизнес-заказчик / Product Owner</div><div class="muted">владелец цели и KPI</div></div>
+        <div class="cell">Формулирует бизнес-задачу и желаемый эффект.</div>
+        <div class="cell">Согласует критерии выбора и KPI пилота.</div>
+        <div class="cell">Принимает гипотезы, даёт экспертов и тестовые данные.</div>
+        <div class="cell">Решает go/no-go, утверждает регламенты.</div>
+        <div class="cell">Отслеживает KPI/ROI, расширяет сценарии.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">Внутренний Champion</div><div class="muted">инициатор изменений</div></div>
+        <div class="cell">Продвигает идею, собирает заинтересованных.</div>
+        <div class="cell">Помогает снять возражения, организует демо.</div>
+        <div class="cell">Вовлекает пользователей, собирает фидбек.</div>
+        <div class="cell">Поддерживает запуск в подразделении.</div>
+        <div class="cell">Мотивирует команду, делится успехами.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">PM клиента</div><div class="muted">координация</div></div>
+        <div class="cell">Планирует участие команд, доступы.</div>
+        <div class="cell">Синхронизирует сроки и задачи.</div>
+        <div class="cell">Контролирует ход пилота, собирает метрики.</div>
+        <div class="cell">Приёмка результатов, переход к внедрению.</div>
+        <div class="cell">Управляет релизами и улучшениями.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">ИТ-контакт клиента</div><div class="muted">интеграции/доступы</div></div>
+        <div class="cell">Проверяет совместимость, риски.</div>
+        <div class="cell">Готовит тестовые доступы/среды.</div>
+        <div class="cell">Подключает системы, даёт логи/данные.</div>
+        <div class="cell">Помогает с деплоем и мониторингом.</div>
+        <div class="cell">Сопровождает эксплуатацию.</div>
+      </div>
+
+      <!-- VENDOR GROUP -->
+      <div class="trow">
+        <div class="cell group">ИСПОЛНИТЕЛЬ</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">Аккаунт-менеджер</div><div class="muted">коммуникации/коммерция</div></div>
+        <div class="cell">Проводит бриф, фиксирует цели.</div>
+        <div class="cell">Готовит предложение, SLA, план пилота.</div>
+        <div class="cell">Ведёт статусы, собирает итоги.</div>
+        <div class="cell">Организует договор/заказ, запуск.</div>
+        <div class="cell">QBR, апсейл, отчёты по результатам.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">AI / Solution Architect</div><div class="muted">тех.решение</div></div>
+        <div class="cell">Проектирует подход и архитектуру.</div>
+        <div class="cell">Подбирает модели/сервисы, оценка рисков.</div>
+        <div class="cell">Собирает прототип, валидирует качество.</div>
+        <div class="cell">Готовит прод-архитектуру, харденинг.</div>
+        <div class="cell">Контролирует стабильность и эволюцию.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">ML / Prompt Engineer</div><div class="muted">качество ответов</div></div>
+        <div class="cell">Определяет метрики качества.</div>
+        <div class="cell">Готовит промпты, базовые датасеты.</div>
+        <div class="cell">Тюнинг/валидация, RAG-настройка.</div>
+        <div class="cell">Фиксация версий, контроль деградаций.</div>
+        <div class="cell">Мониторинг, улучшения.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">Backend / Интеграции</div><div class="muted">связь с ИС</div></div>
+        <div class="cell">Оценивает API/каналы.</div>
+        <div class="cell">Готовит коннекторы/вебхуки.</div>
+        <div class="cell">Интегрирует CRM/телефонию/БД.</div>
+        <div class="cell">Деплой, логирование, алерты.</div>
+        <div class="cell">Поддержка и доработки.</div>
+      </div>
+
+      <div class="trow" role="row">
+        <div class="cell"><div class="role">QA</div><div class="muted">качество сценариев</div></div>
+        <div class="cell">План проверок.</div>
+        <div class="cell">Чек-листы демо.</div>
+        <div class="cell">Тест-кейсы пилота.</div>
+        <div class="cell">Smoke/регресс перед релизом.</div>
+        <div class="cell">Мониторинг инцидентов.</div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
